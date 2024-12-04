@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-115 Final Project</title>
+    <style>
+        .banner img {
+            width: 100%; /* Make the banner image responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .meal-plan-form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .action-buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="meal_plan.png" alt="Meal Plan Banner">
+    </div>
+
+    <div class="meal-plan-form">
+        <h1>Enter Your Meal Plan</h1>
+        <form id="mealPlanForm">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" placeholder="Enter your name" required>
+
+            <label for="userEmail">Email:</label>
+            <input type="email" id="userEmail" placeholder="Enter your email" required>
+
+            <label for="userGoal">Goal for the Week:</label>
+            <textarea id="userGoal" placeholder="Describe your goal for the week" required></textarea>
+
+            <label for="day">Day:</label>
+            <select id="day" required>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+
+            <label for="breakfast">Breakfast:</label>
+            <input type="text" id="breakfast" placeholder="Enter breakfast" required>
+
+            <label for="snack1">Snack 1:</label>
+            <input type="text" id="snack1" placeholder="Enter snack 1" required>
+
+            <label for="lunch">Lunch:</label>
+            <input type="text" id="lunch" placeholder="Enter lunch" required>
+
+            <label for="snack2">Snack 2:</label>
+            <input type="text" id="snack2" placeholder="Enter snack 2" required>
+
+            <label for="dinner">Dinner:</label>
+            <input type="text" id="dinner" placeholder="Enter dinner" required>
+
+            <div class="action-buttons">
+                <button type="button" onclick="generateMealPlanPage()">Generate Meal Plan Page</button>
+                <button type="button" onclick="clearPlanner()">Clear Planner</button>
+                <button type="button" onclick="printPlanner()">Print Planner</button>
+                <button type="button" onclick="downloadPlanner()">Download Planner</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="projectJS.js"></script>
+</body>
+</html>
